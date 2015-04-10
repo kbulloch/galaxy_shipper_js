@@ -26,6 +26,11 @@ h1 {
   color: #FFF;
 }
 
+.triangle_form {
+  margin: 25%;
+  margin-top: 10%;
+}
+
 #result {
   display: none;
 }
