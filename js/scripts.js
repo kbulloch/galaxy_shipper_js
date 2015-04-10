@@ -27,11 +27,8 @@ $(document).ready(function() {
     var a = parseInt($("input#a").val());
     var b = parseInt($("input#b").val());
     var c = parseInt($("input#c").val());
-    console.log("a:" + a);
-
 
     var outcome = triangler([a, b, c]);
-    console.log(outcome);
 
     if(outcome === "Equilateral") {
       $("#output").text("an Equilateral triangle");
@@ -45,8 +42,6 @@ $(document).ready(function() {
     if(outcome === "Invalid Input") {
       $("#output").text("not a valid triangle");
     }
-
-
 
     $("#result").show();
     event.preventDefault();
