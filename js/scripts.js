@@ -1,4 +1,5 @@
 var triangler = function(input) {
+  input.sort();
   if((input[0] + input[1]) <= input[2]){
     console.log("a: " + input[0]);
     console.log("b: " + input[1]);

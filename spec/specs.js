@@ -8,4 +8,8 @@ describe('triangler', function() {
     expect(triangler([1, 1, 3])).to.equal("Invalid Input");
   });
 
+  it('will return "Invalid Input" for input values, in any order, that cannot form a triangle', function() {
+    expect(triangler([2, 1, 1])).to.equal("Invalid Input");
+  });
+
 });
