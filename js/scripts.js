@@ -46,6 +46,9 @@ $(document).ready(function() {
     if(outcome === "Scalene") {
       $("#output").text("a Scalene triangle");
     }
+    if(outcome === "Right") {
+      $("#output").text("a Right triangle");
+    }
     if(outcome === "Invalid Input") {
       $("#output").text("not a valid triangle");
     }
