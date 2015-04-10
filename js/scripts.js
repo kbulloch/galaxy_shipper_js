@@ -1,5 +1,5 @@
-var triangler = function([a, b, c]) {
-
+var triangler = function(input) {
+  return "Equilateral";
 };
 
 
