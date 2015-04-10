@@ -7,22 +7,27 @@ var triangler = function(input) {
   var b = input[1];
   var c = input[2];
 
-  if((a + b) <= c){ //checks if a triangle cannot be formed
+  //checks if a triangle cannot be formed
+  if((a + b) <= c){
     return "Invalid Input";
   }
 
+  //checks for equilateral
   if((a === b) && (b === c)) {
     return "Equilateral";
   }
 
+  //checks for isosceles
   if((a === b) || (b === c)) {
     return "Isosceles";
   }
 
+  //checks for right triangle
   if( ((a*a) + (b*b))  === (c*c) ) {
     return "Right";
   }
 
+  //all remaining triangles will br scalene
   return "Scalene";
 
 };
