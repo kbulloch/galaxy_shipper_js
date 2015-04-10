@@ -12,4 +12,8 @@ describe('triangler', function() {
     expect(triangler([2, 1, 1])).to.equal("Invalid Input");
   });
 
+  it('will return "Isosceles" for an input of all equal values', function() {
+    expect(triangler([2, 1, 2])).to.equal("Isosceles");
+  });
+
 });

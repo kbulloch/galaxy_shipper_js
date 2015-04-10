@@ -10,6 +10,10 @@ var triangler = function(input) {
     return "Equilateral";
   }
 
+  if((input[0] === input[1]) || (input[1] === input[2])) {
+    return "Isosceles";
+  }
+
 };
 
 
