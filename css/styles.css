@@ -1,15 +1,27 @@
 body {
-  background-color: #009999;
+  background: white;
+}
+
+body::after {
+  content: "";
+  background-image: url('http://upload.wikimedia.org/wikipedia/commons/2/2b/GoraBeluha.jpg');
+  background-size: 100%;
+  opacity: .5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 h1 {
+  font-size: 80px;
   font-family:serif;
-  opacity: .8;
+  opacity: .7;
 }
 
-.jumbotron {
-  background-image: url('http://intuitiontosucceed.academy/wp-content/uploads/2014/06/K2_Mount_Godwin_Austen_Chogori_Savage_Mountain1.jpg');
-  background-size: 100%;
+.title {
   text-align: center;
   color: #FFF;
 }
