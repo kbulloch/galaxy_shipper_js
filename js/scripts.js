@@ -14,6 +14,8 @@ var triangler = function(input) {
     return "Isosceles";
   }
 
+  return "Scalene";
+
 };
 
 
