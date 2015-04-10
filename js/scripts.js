@@ -1,16 +1,26 @@
 var triangler = function(input) {
 
   input.sort(); //sorts input for lowest to highest
-  if((input[0] + input[1]) <= input[2]){ //checks if a triangle cannot be formed
+
+  //define a b and c as side lengths from inputs
+  var a = input[0];
+  var b = input[1];
+  var c = input[2];
+
+  if((a + b) <= c){ //checks if a triangle cannot be formed
     return "Invalid Input";
   }
 
-  if((input[0] === input[1]) && (input[1] === input[2])) {
+  if((a === b) && (b === c)) {
     return "Equilateral";
   }
 
-  if((input[0] === input[1]) || (input[1] === input[2])) {
+  if((a === b) || (b === c)) {
     return "Isosceles";
+  }
+
+  if( ((a*a) + (b*b))  === (c*c) ) {
+    return "Right";
   }
 
   return "Scalene";

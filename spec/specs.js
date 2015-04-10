@@ -24,4 +24,8 @@ describe('triangler', function() {
     expect(triangler([4, 3, 2])).to.equal("Scalene");
   });
 
+  it('will return "Right" for input values that form a right triangle', function() {
+    expect(triangler([3, 4, 5])).to.equal("Right");
+  });
+
 });
