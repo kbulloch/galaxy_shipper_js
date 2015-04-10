@@ -1,5 +1,17 @@
 body {
-    background-color: #009999;
+  background-color: #009999;
+}
+
+h1 {
+  font-family:serif;
+  opacity: .8;
+}
+
+.jumbotron {
+  background-image: url('http://intuitiontosucceed.academy/wp-content/uploads/2014/06/K2_Mount_Godwin_Austen_Chogori_Savage_Mountain1.jpg');
+  background-size: 100%;
+  text-align: center;
+  color: #FFF;
 }
 
 #result {
