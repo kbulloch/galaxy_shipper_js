@@ -18,9 +18,6 @@ var triangler = function(input) {
 };
 
 
-
-
-
 $(document).ready(function() {
 
   $("form#triangle_input").submit(function(event) {
