@@ -1,6 +1,6 @@
 function calculateShipping(weight, distance, num_packages, speed) {
-  return (2.5e+9 + ((weight * 13207) * (distance * 73902) * num_packages * (speed * speed)));
-
+  var number = (2.5e+9 + ((weight * 13207) * (distance * 73902) * num_packages * (speed * speed)));
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 $(document).ready(function() {
