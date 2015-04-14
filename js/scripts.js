@@ -33,6 +33,14 @@ $(document).ready(function() {
         else if( ((this.a*this.a) + (this.b*this.b))  === (this.c*this.c) ) {
           $("#output").text("a Right triangle");
           $("#right-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
+          if(this.a === this.b) {
+            $("#output").text("an Isosceles triangle");
+            $("#isosceles-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
+          }
+          else {
+            $("#output").text("a Scalene triangle");
+            $("#scalene-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
+          }
         }
 
         else {
