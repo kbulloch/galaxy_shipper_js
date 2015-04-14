@@ -1,58 +1,26 @@
+function calculateShipping(weight, distance, num_packages, speed) {
+  return (2.5e+9 + ((weight * 13207) * (distance * 73902) * num_packages * (speed * speed)));
+
+}
+
 $(document).ready(function() {
 
-  $("form#triangle_input").submit(function(event) {
-    var a = parseInt($("input#a").val());
-    var b = parseInt($("input#b").val());
-    var c = parseInt($("input#c").val());
+  $("form#ship").submit(function(event) {
+    var weight = $("input#weight").val();
+    var num_packages = $("input#num_packages").val();
+    var distance = $("input#distance").val();
+    var speed = $("select#speed").val();
 
-    var sortme = [a, b, c];
-    sortme.sort();
-
-    var a = sortme[0];
-    var b = sortme[1];
-    var c = sortme[2];
-
-    var triangle = {a: a, b: b, c: c,
-      type: function() {
-        if((this.a + this.b) <= this.c){
-          $("#output").text("not a valid triangle");
-        }
-        //checks for equilateral
-        else if((this.a === this.b) && (this.b === this.c)) {
-          $("#output").text("an Equilateral triangle");
-          $("#equilateral-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
-        }
-
-        //checks for isosceles
-        else if((this.a === this.b) || (this.b === this.c)) {
-          $("#output").text("an Isosceles triangle");
-          $("#isosceles-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
-        }
-
-        //checks for right triangle
-        else if( ((this.a*this.a) + (this.b*this.b))  === (this.c*this.c) ) {
-          $("#output").text("a Right triangle");
-          $("#right-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
-          if(this.a === this.b) {
-            $("#output").text("an Isosceles triangle");
-            $("#isosceles-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
-          }
-          else {
-            $("#output").text("a Scalene triangle");
-            $("#scalene-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
-          }
-        }
-
-        else {
-          //all remaining triangles will be scalene
-          $("#output").text("a Scalene triangle");
-          $("#scalene-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
-        }
+    var shipping_Object = {
+      weight: weight, num_packages: num_packages, distance: distance, speed: speed,
+      calculatePrice: function() {
+        return calculateShipping(this.weight, this.distance, this.num_packages, this.speed)
       }
     };
 
-    triangle.type();
-
+    var cost = shipping_Object.calculatePrice();
+    debugger;
+    $('#output').text(cost);
     $("#result").show();
     event.preventDefault();
   });

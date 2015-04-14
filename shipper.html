@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Shipper Calcer</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="title">
+        <h1>Galaxy Shipping Corp</h1>
+      </div>
+
+      <div class="ship-form">
+        <form id="ship">
+          <input type="number" id="weight" placeholder="Weight (mega tons)" class="form-control" required>
+          <br>
+          <input type="number" id="num_packages" placeholder="Number of Packages" class="form-control" required>
+          <br>
+          <input type="number" id="distance" placeholder="Distance (moon units)" class="form-control" required>
+          <br>
+          <select id="speed">
+            <option value="1">Slow</option>
+            <option value="2">Decent</option>
+            <option value="3">Quick</option>
+          </select>
+          <div id="button">
+            <button type="submit" class="btn btn-danger">Moon Shot!</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="result">
+        <h3>That will cost $<span id="output"></span></h3>
+      </div>
+
+
+    </div>
+  </body>
+</html>
