@@ -44,15 +44,22 @@ $(document).ready(function() {
 
     if(outcome === "Equilateral") {
       $("#output").text("an Equilateral triangle");
+      $("#equilateral-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
     }
     if(outcome === "Isosceles") {
       $("#output").text("an Isosceles triangle");
+      $("#isosceles-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
+
     }
     if(outcome === "Scalene") {
       $("#output").text("a Scalene triangle");
+      $("#scalene-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
+
     }
     if(outcome === "Right") {
       $("#output").text("a Right triangle");
+      $("#right-list").append("<li>" + a + ", " + b + ", " + c + "</li>");
+
     }
     if(outcome === "Invalid Input") {
       $("#output").text("not a valid triangle");
