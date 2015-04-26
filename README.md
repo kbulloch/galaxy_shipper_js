@@ -1,14 +1,20 @@
-#Triangle Qualifier
+#Galaxy Shipping Corp
 
-###Javascript Assessment 1
+###Javascript Exercise
 
-04.10.2015
-
-Kyle Bulloch
+Kyle Bulloch and John Lin
 
 ###Description
 
-This app will take three lengths and determine what type of triangle will be formed.
+This app takes some inputs from the user and returns the cost of shipping.  In space.
+
+###Setup
+
+Clone this repository.
+
+Open shipper.html in your browser
+
+###Legal
 
 MIT License
 
